@@ -1,0 +1,111 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    margin: 0 10%;
+    background-color: #fff3ea;
+
+  }
+  
+  h1 {
+    font-family: 'Chango', cursive;
+    font-size: 3rem;
+
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+        font-size: 2rem;
+
+  }
+
+
+
+  .container {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  
+  .color-container {
+    width: 100%;
+  }
+  
+  .color-panel {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 100px;
+  }
+  
+  .pink {
+    background-color: #e4a8ec;
+    color: #fff;
+  }
+  
+  .blue {
+    background-color: #3c5bce;
+    color: #000;
+  }
+  
+  .green {
+    background-color: #69d092;
+  }
+  
+  .cream {
+    border: 2px solid #3c5bce;
+    background-color: #fff3ea;
+  }
+  
+  .font-panel {
+    width: 45%;
+    display: inline-block;
+  }
+  
+  .font-label {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  
+  .regular {
+    font-style: normal;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+    
+  .text-panel h1 {
+    font-weight: 700;
+    font-family: 'Chango', cursive;
+  }
+  
+  .text-panel h2 {
+    font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  .text-panel p {
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+
+  .chango {
+    font-family: 'Chango', cursive;
+
+  }
+
+  .DMserif{
+    font-family: 'DM Serif Display', serif;
+
+  }
+
+  .workSans {
+    font-family: 'Work Sans', sans-serif;
+  }   
