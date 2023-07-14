@@ -2,11 +2,69 @@
     box-sizing: border-box;
 }
 
+/* NO NOT REORDER !!! JS is expecting ':root {}' to be at cssRules[1] */
+/* These colours must remain hexadecimal colours for JS */
+
+/* Accent Colours */
+:root {
+    --primary: #e4a8ec;
+    --secondary: #cadf92;
+    --green: #56c281;
+    --yellow: #FFD913;
+    --orange: #ffc397;
+    --red: #f191bb;
+    /* --red: #d55be0; */
+    --purple: #9e91f1;
+    /* --blue: #6582e9; */
+}
+
+/* accent and base colours are seperated for easier ease of JS access to accent colours 
+
+/* Base Colours */
+:root {
+    --main: #3c5bce;
+    --background: #fff0e4;
+    --mainText: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Accent Colours */
+/* :root {
+    --primary: #92c2bc;
+    --secondary: #1ee9e6;
+    --green: #60ce83;
+    --yellow: #ffd813;
+    --orange: #f49049;
+    --red: #da7496;
+    --purple: #8d97f1;
+} */
+
+/* Base Colours */
+/* :root {
+    --main: #2b77bf;
+    --background: #fdf5ef;
+    --mainText: #000000;
+} */
+ 
+
+
+
+
 body {
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     margin: 0 5%;
-    background-color: #fff3ea;
+    background-color: var(--background);
+    color: var(--mainText);
     /* border: 1px solid black; */
 }
 
@@ -17,17 +75,17 @@ header {
     align-items: center;
     flex-flow: column, wrap;
     font-family: 'Sansita', sans-serif;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--mainText);
     /* border: 1px solid rgb(43, 207, 87); */
 
 
 }
 
-.headerTitle {
+#headerTitle {
     font-family: 'Sansita', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #000000;
+    /* color: #000000; */
     /* border: 1px solid rgb(221, 105, 209); */
 
 
@@ -36,8 +94,10 @@ header {
 h1 {
     font-family: 'Yeseva One', Serif;
     font-size: 3rem;
-    color: #000000;
+    /* color: #000000; */
 }
+
+
 
 
 nav {
@@ -52,30 +112,42 @@ nav {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: #000000;
+    /* color: #000000; */
 }
 
 a:visited {
-    color: #000000;
+    color: var(--mainText);
 }
 
 a:hover {
-    color: #3c5bce;
+    color: var(--main);
     /* animation: textRainbow 1.3s linear infinite; */
 
 }
 
 
 
-.tumbleStarContainer {
+#tumbleStarContainer {
     height: 2em;
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
     overflow: hidden;
-    margin: 2em 2em;
+    display: inline-flex;
+    justify-content: center;
+    margin: 3% 5%;
+    letter-spacing: 0.5em;
     /* border: 1px solid rgb(78, 68, 218); */
+}
+
+#tumbleStars {
+    color: var(--main);
+}
+
+
+/* THIS STYLES THE STARS IN TUMBLESTARS <p>>
+THAT <p> IS REPLACED WITH INDIVIDUAL SPANS FOR EACH STAR EACH WITH THE CLASS tumbleStar 
+THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
+.tumbleStar {
+    /* color: var(--primary); */
 }
 
 
@@ -86,7 +158,7 @@ a:hover {
     border-radius: 30px;
     padding: 30px 50px 30px 10px;
     margin: 10px;
-    border: 3px solid var(--primary);
+    border: 3px solid var(--mainText);
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -105,12 +177,12 @@ a:hover {
     border-radius: 20px;
     padding: 30px;
     margin: 10px;
-    background-color: #3c5bce;
+    background-color: var(--main);
     border: 3px solid var(--primary);
-    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
-        20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -3px var(--background), 30px -30px var(--orange),
-        40px -40px 0 -3px var(--background), 40px -40px var(--red);
+    box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--green),
+        20px -20px 0 -3px var(--main), 20px -20px var(--yellow),
+        30px -30px 0 -3px var(--main), 30px -30px var(--orange),
+        40px -40px 0 -3px var(--main), 40px -40px var(--red);
 }
 
 .lastestWorkContainer:hover {
@@ -121,75 +193,61 @@ a:hover {
 @keyframes stackShadowWave {
     0% {
         border: 3px solid var(--primary);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
-            20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
-            30px -30px 0 -3px var(--background), 30px -30px var(--orange),
-            40px -40px 0 -3px var(--background), 40px -40px var(--red);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--green),
+            20px -20px 0 -3px var(--main), 20px -20px var(--yellow),
+            30px -30px 0 -3px var(--main), 30px -30px var(--orange),
+            40px -40px 0 -3px var(--main), 40px -40px var(--red);
     }
 
     20% {
         border: 3px solid var(--red);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary),
-            20px -20px 0 -3px var(--background), 20px -20px var(--green),
-            30px -30px 0 -3px var(--background), 30px -30px var(--yellow),
-            40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--primary),
+            20px -20px 0 -3px var(--main), 20px -20px var(--green),
+            30px -30px 0 -3px var(--main), 30px -30px var(--yellow),
+            40px -40px 0 -3px var(--main), 40px -40px var(--orange);
     }
 
     40% {
         border: 3px solid var(--orange);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red),
-            20px -20px 0 -3px var(--background), 20px -20px var(--primary),
-            30px -30px 0 -3px var(--background), 30px -30px var(--green),
-            40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--red),
+            20px -20px 0 -3px var(--main), 20px -20px var(--primary),
+            30px -30px 0 -3px var(--main), 30px -30px var(--green),
+            40px -40px 0 -3px var(--main), 40px -40px var(--yellow);
     }
 
     60% {
         border: 3px solid var(--yellow);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange),
-            20px -20px 0 -3px var(--background), 20px -20px var(--red),
-            30px -30px 0 -3px var(--background), 30px -30px var(--primary),
-            40px -40px 0 -3px var(--background), 40px -40px var(--green);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--orange),
+            20px -20px 0 -3px var(--main), 20px -20px var(--red),
+            30px -30px 0 -3px var(--main), 30px -30px var(--primary),
+            40px -40px 0 -3px var(--main), 40px -40px var(--green);
     }
 
     80% {
         border: 3px solid var(--green);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
-            20px -20px 0 -3px var(--background), 20px -20px var(--orange),
-            30px -30px 0 -3px var(--background), 30px -30px var(--red),
-            40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--yellow),
+            20px -20px 0 -3px var(--main), 20px -20px var(--orange),
+            30px -30px 0 -3px var(--main), 30px -30px var(--red),
+            40px -40px 0 -3px var(--main), 40px -40px var(--primary);
     }
 
     100% {
         border: 3px solid var(--primary);
-        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
-            20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
-            30px -30px 0 -3px var(--background), 30px -30px var(--orange),
-            40px -40px 0 -3px var(--background), 40px -40px var(--red);
+        box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--green),
+            20px -20px 0 -3px var(--main), 20px -20px var(--yellow),
+            30px -30px 0 -3px var(--main), 30px -30px var(--orange),
+            40px -40px 0 -3px var(--main), 40px -40px var(--red);
     }
 
 }
 
-
-:root {
-    --primary: #e4a8ec;
-    --secondary: #b5e333;
-    --background: #3c5bce;
-    --green: #69d092;
-    --yellow: #FFD913;
-    --orange: #FF9C55;
-    --red: #f19191;
-    --primary1: #e4a8ec;
-    --green1: #9dd069;
-    --yellow1: #ffc013;
-    --orange1: #ff8e55;
-    --red1: #ea4646;
-}
+/*  */
 
 .windowContainer {
     height: 98%;
     width: 95%;
-    background-color: #e4dad2;
-    border: 1px solid rgb(96, 102, 216);
+    background-color: var(--background);
+    /* border: 1px solid rgb(96, 102, 216); */
     border-radius: 13px;
     border-collapse: separate; 
     margin: auto;
@@ -202,7 +260,7 @@ a:hover {
 .tabBarContainer {
     height: 2.5rem;
     width: 100%;
-    background-color: #cf2ade;
+    /* background-color: #cf2ade; */
     border-radius: 14px 14px 0 0; 
     display: inline-flex;
     justify-content: space-between;
@@ -211,7 +269,7 @@ a:hover {
 
 
 .starsTabBarContainer {
-    background-color: #fff3ea;
+    background-color: var(--background);
     /* border-radius: 13px 0 13px 0;  */
     border-radius: 13px 0 0 0; 
     width: 70px;
@@ -220,20 +278,20 @@ a:hover {
 
 
 .headingTabBarContainer {
-    background-color: #e4a8ec;
+    background-color: var(--primary);
     width: 100%;
     z-index: 10;
 }
 
 .negSpaceTabBarContainer {
-    background-color: #fff3ea;
+    /* background-color: #fff3ea; */
     border-radius: 0 13px 0 0; 
     width: 340px;
     z-index: 10;
 }
 
 .starsTabBar {
-    background-color: #e4a8ec;
+    background-color: var(--primary);
     border-radius: 13px 0 13px 0; 
     width: 70px;
     height: 100%;
@@ -252,7 +310,7 @@ a:hover {
 }
 
 .negSpaceTabBar {
-    background-color: #e4a8ec;
+    background-color: var(--primary);
     border-radius: 0 13px 0 13px; 
     width: 340px;
     height: 100%;
@@ -276,15 +334,19 @@ a:hover {
 }
 
 .tabStar1{
-    color:  #cf2ade;
+    /* --red: #d55be0; */
+    color:  hsl(295, 74%, 61%);
+
 }
 
 .tabStar2{
-    color: #FFD913;
+    color: var(--yellow);
 }
 
 .tabStar3{
-    color: #69d092;
+    color: #44aa6d;
+    /* color: var(--green); */
+
 }
 
 
@@ -348,7 +410,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     /* border: 2px solid darkorchid; */
-    background-color: #3c5bce;
+    background-color: var(--main);
     box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red);
 
   }
@@ -360,15 +422,17 @@ a:hover {
   
   a.button:active {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    border: 2px solid rgb(233, 187, 112);
+    /* border: 2px solid rgb(233, 187, 112); */
     margin: 15px 0px 0 10px;
   }
   
 
   .buttonWrapper:hover {
-    animation: boxShadowWave 1.3s linear infinite;
-    background-color: #6582e9;
-    transition: background-color 0.5s linear ;
+    animation: boxShadowWave 1s linear infinite;
+    /* background-color: #6582e9; */
+    background-color: var(--purple);
+
+    transition: background-color 1s linear ;
 
 }
 
