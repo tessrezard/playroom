@@ -126,16 +126,14 @@ function createObject(keys, values) {
 
 // setTimeout(callReset, 1.0 * 1000);
 // setTimeout(reset, 2.0 * 1000);
-d
+
 // const callResetAgain = () => {
 //         reset(2);
 // }
   
 // setTimeout(callResetAgain, 2.0 * 1000);
 
-       
-
-
+    
 }
 
   
@@ -170,11 +168,15 @@ d
 let thanks = document.getElementById('responseToSubmitContainer');
 
 // Write your code below
-function reveal () {
+function reveal (event) {
   thanks.style.display = 'flex';
+  event.preventDefault();
+
 }
 
-// const 
+// document.addEventListener('keyup', reveal);
 
-document.addEventListener('keydown', reveal);
+
+const form = document.getElementById("form");
+form.addEventListener("submit", reveal);
 
