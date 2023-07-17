@@ -11,11 +11,9 @@
     --secondary: #cadf92;
     --green: #56c281;
     --yellow: #FFD913;
-    --orange: #ffc397;
+    --orange: #f8b281;
     --red: #f191bb;
-    /* --red: #d55be0; */
     --purple: #9e91f1;
-    /* --blue: #6582e9; */
 }
 
 /* accent and base colours are seperated for easier ease of JS access to accent colours 
@@ -26,15 +24,6 @@
     --background: #fff0e4;
     --mainText: #000000;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Accent Colours */
@@ -126,9 +115,13 @@ a:hover {
 }
 
 
+aside{
+    font-size: smaller;
+    font-style: italic;
+}
 
 #tumbleStarContainer {
-    height: 2em;
+    height: 3%;
     width: 90%;
     overflow: hidden;
     display: inline-flex;
@@ -148,15 +141,16 @@ THAT <p> IS REPLACED WITH INDIVIDUAL SPANS FOR EACH STAR EACH WITH THE CLASS tum
 THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 .tumbleStar {
     /* color: var(--primary); */
+    font-size: 1.5rem;
 }
 
 
 
-.latestWorkSection {
+.mainSection {
     height: fit-content ;
     width: 98%;
     border-radius: 30px;
-    padding: 30px 50px 30px 10px;
+    padding: 2em 1em ;
     margin: 10px;
     border: 3px solid var(--mainText);
     display: flex;
@@ -170,13 +164,15 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 
-.lastestWorkContainer {
+.rainbowStackContainer {
     height: 95%;
     width: 90%;
     /* border: 3px solid rgb(136, 120, 229); */
     border-radius: 20px;
     padding: 30px;
     margin: 10px;
+    position: relative;
+    right: 1.225em;
     background-color: var(--main);
     border: 3px solid var(--primary);
     box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--green),
@@ -185,7 +181,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         40px -40px 0 -3px var(--main), 40px -40px var(--red);
 }
 
-.lastestWorkContainer:hover {
+.rainbowStackContainer:hover {
     animation: stackShadowWave 1s linear infinite;
 }
 
@@ -247,8 +243,8 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     height: 98%;
     width: 95%;
     background-color: var(--background);
-    /* border: 1px solid rgb(96, 102, 216); */
-    border-radius: 13px;
+    border: 3px solid var(--primary);
+    border-radius: 18px;
     border-collapse: separate; 
     margin: auto;
     position: relative;
@@ -299,7 +295,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .headingTabBar {
-    background-color: #fff3ea;
+    background-color: var(--background);
     width: 100%;
     height: 85%;
     z-index: 10;
@@ -400,61 +396,74 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     align-items: center;
     margin: 5px;
     padding: 0.8em;
+    height: 3em;
     /* border: 2px solid plum; */
 }
   
   .buttonWrapper {
-    height: 3em;
-    border-radius: 20px;
+    /* height: 3em; */
+    padding: 1em;
+    border-radius: 0.75em;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid darkorchid; */
+    border: 2px solid var(--mainText);
     background-color: var(--main);
-    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red);
-
-  }
+    position: relative;
+    /* opacity: 0.75; */
+    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--mainText);
+    transition: all 300ms; 
   
-  a.buttonText {
-    padding: 1em;
+}
+  
+  a.buttonText , input[type="submit"]{
     color: #fff3ea;
   }
   
-  a.button:active {
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    /* border: 2px solid rgb(233, 187, 112); */
-    margin: 15px 0px 0 10px;
-  }
   
+
 
   .buttonWrapper:hover {
     animation: boxShadowWave 1s linear infinite;
     /* background-color: #6582e9; */
     background-color: var(--purple);
-
     transition: background-color 1s linear ;
+}
 
+
+ .buttonWrapper:active{
+    /* margin-top: 10px;
+    margin-left: 10px; */
+    font-size:  0.9em;
+    padding: 0.9em;
+    border-radius: 0.75em;
+    /* box-shadow: 0.1px 0.1px var(--primary), 0.2px 0.2px var(--green), 0.3px 0.3px var(--yellow), 0.4px 0.4px var(--orange), 0.5px 0.5px var(--red), 0.6px  0.6px var(--mainText); */
+    transition: all 300ms linear; 
+
+ 
 }
 
 
 @keyframes boxShadowWave {
     0% {
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange);
+
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--mainText);
     }
     20% {
-        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow);
+
+        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow), 12px  12px var(--mainText);
     }
     40% {
-        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green);
+        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green), 12px  12px var(--mainText);
     }
     60% {
-        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary);
+        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary), 12px  12px var(--mainText);
     }
     80% {
-        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red);
+        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--mainText);
     }
     100% {
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange);
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--mainText);
     }
 }
 
@@ -486,3 +495,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 
+
+#responseToSubmitContainer {
+    display: none;
+}

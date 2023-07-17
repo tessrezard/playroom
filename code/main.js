@@ -45,7 +45,6 @@ function createObject(keys, values) {
   //////////////////////////////////////////////////////////////////////////
   // 
 
-  
   function starWave () {
     const stars = document.getElementById('tumbleStars');
     let numberOfStars = 0;
@@ -80,7 +79,7 @@ function createObject(keys, values) {
             if (rootColorIndex > CssRootColors.length - 1) {
                  rootColorIndex = 0;
             }
-            console.log('rootColorIndex: ' , rootColorIndex);
+            // console.log('rootColorIndex: ' , rootColorIndex);
         }
     }
     setAllStarColors();
@@ -107,7 +106,7 @@ function createObject(keys, values) {
             if (rootIndex > CssRootColors.length - 1) {
                  rootIndex = 0;
             }
-            console.log('rootIndex: ' , rootIndex);
+            // console.log('rootIndex: ' , rootIndex);
         }
   }
 
@@ -127,7 +126,7 @@ function createObject(keys, values) {
 
 // setTimeout(callReset, 1.0 * 1000);
 // setTimeout(reset, 2.0 * 1000);
-
+d
 // const callResetAgain = () => {
 //         reset(2);
 // }
@@ -142,5 +141,40 @@ function createObject(keys, values) {
   
   starWave();
 
+// const reveal = (subjectId) => {
+//     const subject = document.getElementById('subjectId');
+//     subject.style.display = 'flex';
 
+// }
   
+// reveal(responseToSubmitContainer);
+
+
+// let ball = document.getElementById('float-circle');
+
+// // Write your code below
+// function up () {
+//   ball.style.bottom = '250px';
+// }
+
+// function down() {
+//   ball.style.bottom = '50px';
+// }
+
+// document.addEventListener('keydown', up);
+
+// document.addEventListener('keyup', down);  
+
+
+
+let thanks = document.getElementById('responseToSubmitContainer');
+
+// Write your code below
+function reveal () {
+  thanks.style.display = 'flex';
+}
+
+// const 
+
+document.addEventListener('keydown', reveal);
+

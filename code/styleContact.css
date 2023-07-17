@@ -1,0 +1,129 @@
+
+#responseToSubmitContainer {
+    color: var(--main);
+    justify-content: center;
+    flex-flow: column;
+} 
+
+h3.responseToSubmit {
+    margin: 1% auto 0.5% auto;
+    text-align: center;
+    display: inline;
+
+}
+
+h4.responseToSubmit {
+    margin: 1% auto 7% auto;
+    text-align: center;
+}
+.inlineStar{
+    color: var(--main);
+}
+
+
+.subHeading{
+text-align: center;
+margin: auto;
+}
+
+form {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-end ;
+}
+
+.inputContainer{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.halfwidthContainer{
+    width: 50%;
+}
+
+.fullwidthContainer {
+    width: 100%;
+    justify-content: center;
+}
+
+label, .inputContainer aside{
+    margin: 0 1em;
+}
+
+
+.input{
+    display: block;
+    border:1.5px solid var(--mainText);
+    border-radius: 7px;
+    margin: 0.3em 1em 2em 1em;
+    padding: 0.5em;
+}
+
+
+
+ #message,  #feedback{
+    height: 7em;
+    
+}
+
+
+
+/* 
+
+input[type="text"], input[type="number"] {
+    min-height: 15px;
+    border-radius: 5px;
+    border:1.5px solid var(--mainText);
+    padding: 0.5em;
+  }
+  
+  input[type="radio"] {
+    margin-left: 12px;
+  } */
+  
+
+
+.formAsterix {
+    font-size: 1.2em;
+    padding: 0.1em;
+    position: relative;
+    bottom: 0.1em;
+}
+
+#asterix1 {
+    color: var(--primary);
+
+}
+
+#asterix2 {
+    color: var(--green);
+}
+
+#asterix3 {
+    color: var(--orange);
+}
+
+#asterix4 {
+    color: var(--red);
+}
+
+#asterix5 {
+    color: var(--red);
+}
+
+#asterix6 {
+    color: var(--purple);
+}
+
+input[type=submit] {
+    /* padding: 15px 15px; */
+    background: none;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
