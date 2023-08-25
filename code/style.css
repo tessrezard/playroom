@@ -9,7 +9,7 @@
 :root {
     --primary: #e4a8ec;
     --secondary: #cadf92;
-    --green: #56c281;
+    --green: #68cd8d;
     --yellow: #FFD913;
     --orange: #f8b281;
     --red: #f191bb;
@@ -24,27 +24,6 @@
     --background: #fff0e4;
     --mainText: #000000;
 }
-
-
-/* Accent Colours */
-/* :root {
-    --primary: #92c2bc;
-    --secondary: #1ee9e6;
-    --green: #60ce83;
-    --yellow: #ffd813;
-    --orange: #f49049;
-    --red: #da7496;
-    --purple: #8d97f1;
-} */
-
-/* Base Colours */
-/* :root {
-    --main: #2b77bf;
-    --background: #fdf5ef;
-    --mainText: #000000;
-} */
- 
-
 
 
 
@@ -74,34 +53,48 @@ header {
     font-family: 'Sansita', sans-serif;
     font-size: 2rem;
     font-weight: 700;
+    text-align: center;
+    padding: 20px;
     /* color: #000000; */
     /* border: 1px solid rgb(221, 105, 209); */
-
-
 }
+
+
 
 h1 {
     font-family: 'Yeseva One', Serif;
     font-size: 3rem;
     /* color: #000000; */
+    color: var(--mainText);
 }
 
+h2 {
+    font-family: 'Sansita', sans-serif;
+    font-size: 2rem;
+    /* color: #000000; */
+    color: var(--primary);
+    margin: 0;
 
-
-
+}
 nav {
     font-size: 1.25rem;
     letter-spacing: 0.05em;
     display: inline-flex;
     justify-content: space-between;
-    width: 15%;
+    /* width: 15%; */
     /* border: 1px solid rgb(221, 105, 209); */
 }
+
+
 
 a {
     text-decoration: none;
     cursor: pointer;
     /* color: #000000; */
+}
+
+nav a {
+    padding: 0 0.75em 0 0.75em;
 }
 
 nav a:visited,  a#headerTitle:visited{
@@ -110,7 +103,8 @@ nav a:visited,  a#headerTitle:visited{
 
 nav a:hover , a#headerTitle:hover{
     color: var(--main);
-    /* animation: textRainbow 1.3s linear infinite; */
+    transition: color 1s ease-in-out; /* Add a smooth transition effect for color changes */
+    animation: textRainbow 7s linear infinite;
 
 }
 
@@ -135,6 +129,9 @@ aside{
     color: var(--main);
 }
 
+.tumbleStar {
+    transition: color 0.25s ease; /* Add a smooth transition effect for color changes */
+}
 
 /* THIS STYLES THE STARS IN TUMBLESTARS <p>>
 THAT <p> IS REPLACED WITH INDIVIDUAL SPANS FOR EACH STAR EACH WITH THE CLASS tumbleStar 
@@ -158,6 +155,8 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     align-items: center;
     flex-flow: column;
 }
+
+
 
 .sectionTitle {
     margin: 0 auto 3rem auto;
@@ -184,6 +183,361 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 .rainbowStackContainer:hover {
     animation: stackShadowWave 1s linear infinite;
 }
+
+
+.forMobileProjHeader{
+    position: relative;
+    left: 7px;
+    padding: 0.25em;
+    display: none;
+    text-align: center;
+
+
+}
+    
+
+/*  */
+
+
+.windowContainer {
+    height: 98%;
+    width: 95%;
+    background-color: var(--background);
+    border: 3px solid var(--primary);
+    border-radius: 18px;
+    border-collapse: separate; 
+    margin: auto;
+    position: relative;
+    top: 1%;
+    display: flex;
+    flex-flow: column;
+}
+
+.tabBarContainer {
+    height: 4rem;
+    width: 100%;
+    /* background-color: #cf2ade; */
+    border-radius: 14px 14px 0 0; 
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+
+.starsTabBarContainer {
+    background-color: var(--background);
+    /* border-radius: 13px 0 13px 0;  */
+    border-radius: 13px 0 0 0; 
+    width: 80px;
+    z-index: 10;
+}
+
+
+.headingTabBarContainer {
+    background-color: var(--primary);
+    width: 100%;
+    z-index: 10;
+}
+
+.negSpaceTabBarContainer {
+    /* background-color: #fff3ea; */
+    border-radius: 0 13px 0 0; 
+    width: 340px;
+    z-index: 10;
+}
+
+.starsTabBar {
+    background-color: var(--primary);
+    border-radius: 13px 0 13px 0; 
+    width: 80px;
+    height: 100%;
+    z-index: 10;
+}
+
+.headingTabBar {
+    background-color: var(--background);
+    width: 100%;
+    height: 85%;
+    z-index: 10;
+    position: relative;
+    top: 11px;;
+    border-radius: 13px 13px 0 0; 
+}
+
+.negSpaceTabBar {
+    background-color: var(--primary);
+    border-radius: 0 13px 0 13px; 
+    width: 340px;
+    height: 100%;
+    z-index: 10;
+}
+
+
+
+.tabStars {
+    display: inline-flex;
+    position: relative;
+    top: 0.8em;
+    left: 0.3em;
+    align-items: center;
+    height: auto;
+    width: auto;
+    font-size: 1.25em;
+}
+
+.tabStar{
+    margin: 0.15em;
+}
+
+.tabStar1{
+    /* --red: #d55be0; */
+    color:  hsl(295, 74%, 61%);
+
+}
+
+.tabStar2{
+    color: var(--yellow);
+}
+
+.tabStar3{
+    color: #44aa6d;
+    /* color: var(--green); */
+
+}
+
+
+.tabHeadingWrapper {
+    display: inline-flex;
+    flex-flow: nowrap;
+    position: relative;
+    top: 0.5em;
+    left: 1em;
+    align-items: center;
+    height: auto;
+    width: auto;
+    font-size: 1em;
+}
+
+.tabHeading {
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: .05em;
+    position: relative;
+    top: 3px;    
+}
+
+
+.latestWorkImgWrapper {
+    margin: 3%;
+    height: 80%;
+    width: 95%;
+    position: relative;
+    object-fit: cover;
+    /* border: 3px solid var(--primary);
+    border-radius: 10px; */
+    z-index: 100;
+}
+
+.latestWorkImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+}
+
+
+
+.buttonContainer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 5px;
+    padding: 0.8em;
+    height: 3em;
+    /* border: 2px solid plum; */
+}
+  
+  .buttonWrapper {
+    /* height: 3em; */
+    color: var(--background);
+    padding: 1em;
+    border-radius: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary);
+    background-color: var(--main);
+    position: relative;
+    /* opacity: 0.75; */
+    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--main);
+    transition: all 300ms; 
+
+  
+}
+
+.buttonText{
+    color: var(--background);
+}
+  
+   input[type="submit"]{
+    color: var(--background);
+
+
+  }
+  
+  
+
+
+  .buttonWrapper:hover {
+    animation: boxShadowWave 1s linear infinite;
+    /* background-color: #6582e9; */
+    background-color: var(--purple);
+    transition: background-color 1s linear ;
+}
+
+
+ .buttonWrapper:active{
+    /* margin-top: 10px;
+    margin-left: 10px; */
+    font-size:  0.9em;
+    padding: 0.9em;
+    border-radius: 0.75em;
+    /* box-shadow: 0.1px 0.1px var(--primary), 0.2px 0.2px var(--green), 0.3px 0.3px var(--yellow), 0.4px 0.4px var(--orange), 0.5px 0.5px var(--red), 0.6px  0.6px var(--mainText); */
+    transition: all 300ms linear; 
+
+ 
+}
+
+
+/* ---------------------------------------MEDIA QUERIES---------------------------------------------*/
+
+
+@media screen and (max-width: 1000px) {
+    body{
+        margin: 1%;
+    }
+    .mainSection {
+        width: 98%;
+        padding: 0 ; 
+        margin: 0;
+        border: 0px;
+        /* justify-content: center; */
+    }
+    .rainbowStackContainer {
+        height: 90%;
+        width: 90%;
+        /* border: 3px solid rgb(136, 120, 229); */
+        margin: 1em;
+        padding: 1em;
+        position: relative;
+        right: 1.225em;
+    }
+    .windowContainer {
+        height: 98%;
+        width: 98%;
+        background-color: var(--background);
+        border: 3px solid var(--primary);
+        border-radius: 18px;
+        border-collapse: separate; 
+        margin: auto;
+        position: relative;
+        top: 1%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .negSpaceTabBarContainer{
+        width: 25%;   
+    }
+    .negSpaceTabBar {
+        width: 100%;   
+    }
+}
+
+@media  screen and (max-width: 700px){
+    nav {
+        display: block;
+        justify-content: center;
+    }
+    nav a {
+    padding-top: 0.75em;
+    color: var(--primary);
+    }
+    .navLeft{
+        text-align: left;
+    }
+    .navRight{
+        text-align: right;
+    }
+    .rainbowStackContainer {
+        height: 95%;
+        width: 90%;
+    }
+        /* account for shortening the tab height becasue moving title.  */
+
+    .tabBarContainer {
+        height: 2rem;
+    }
+    .starsTabBarContainer, .starsTabBar {
+        width: 70px;
+    }
+    .headingTabBar {
+        top: 5px;;
+    }
+    .tabStars {
+        top: 0.3em;
+        left: 0.5em;
+        font-size: 1em;
+    }
+    .tabHeading {
+        display: none;
+        font-size: 1.5em;
+        letter-spacing: .05em;
+        position: relative;
+        top: 3px;    
+    }
+    .negSpaceTabBarContainer{
+        width: 100%;   
+    }
+    .forMobileProjHeader{
+        display: inline;
+    }
+}
+
+
+@media screen and (max-width: 500px ){
+
+    .navLeft, .navRight{
+        font-size: 1em;
+    }
+    .sectionTitle {
+        margin: 0;
+        text-align: center;
+        font-size: 2.5em ;
+    }
+    .rainbowStackContainer {
+        height: 95%;
+        width: 90%;
+        /* border: 3px solid rgb(136, 120, 229); */
+        border-radius: 20px;
+        padding: 1em;
+        margin: 10px;
+        position: relative;
+        right: 0;
+        background-color: var(--main);
+        border: 3px solid var(--primary);
+        box-shadow: none;
+    }
+    .rainbowStackContainer:hover {
+        animation: none;
+    }
+
+}
+
+/* ---------------------------------------KEYFRAME ANIMATIONS---------------------------------------------*/
+
 
 
 @keyframes stackShadowWave {
@@ -237,274 +591,81 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 }
 
-/*  */
-
-.windowContainer {
-    height: 98%;
-    width: 95%;
-    background-color: var(--background);
-    border: 3px solid var(--primary);
-    border-radius: 18px;
-    border-collapse: separate; 
-    margin: auto;
-    position: relative;
-    top: 1%;
-    display: flex;
-    flex-flow: column;
-}
-
-.tabBarContainer {
-    height: 2.5rem;
-    width: 100%;
-    /* background-color: #cf2ade; */
-    border-radius: 14px 14px 0 0; 
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-
-
-.starsTabBarContainer {
-    background-color: var(--background);
-    /* border-radius: 13px 0 13px 0;  */
-    border-radius: 13px 0 0 0; 
-    width: 70px;
-    z-index: 10;
-}
-
-
-.headingTabBarContainer {
-    background-color: var(--primary);
-    width: 100%;
-    z-index: 10;
-}
-
-.negSpaceTabBarContainer {
-    /* background-color: #fff3ea; */
-    border-radius: 0 13px 0 0; 
-    width: 340px;
-    z-index: 10;
-}
-
-.starsTabBar {
-    background-color: var(--primary);
-    border-radius: 13px 0 13px 0; 
-    width: 70px;
-    height: 100%;
-    z-index: 10;
-}
-
-.headingTabBar {
-    background-color: var(--background);
-    width: 100%;
-    height: 85%;
-    z-index: 10;
-    position: relative;
-    top: 6px;;
-    border-radius: 13px 13px 0 0; 
-
-}
-
-.negSpaceTabBar {
-    background-color: var(--primary);
-    border-radius: 0 13px 0 13px; 
-    width: 340px;
-    height: 100%;
-    z-index: 10;
-}
-
-
-.tabStars {
-    display: inline-flex;
-    position: relative;
-    top: 0.7em;
-    left: 0.5em;
-    align-items: center;
-    height: auto;
-    width: auto;
-    font-size: 1em;
-}
-
-.tabStar{
-    margin: 0.15em;
-}
-
-.tabStar1{
-    /* --red: #d55be0; */
-    color:  hsl(295, 74%, 61%);
-
-}
-
-.tabStar2{
-    color: var(--yellow);
-}
-
-.tabStar3{
-    color: #44aa6d;
-    /* color: var(--green); */
-
-}
-
-
-.tabHeadingWrapper {
-    display: inline-flex;
-    flex-flow: nowrap;
-    position: relative;
-    top: 0.5em;
-    left: 1em;
-    align-items: center;
-    height: auto;
-    width: auto;
-    font-size: 1em;
-}
-
-.tabHeading {
-    font-size: 1em;
-    letter-spacing: .05em;
-    
-}
-
-
-.latestWorkImgWrapper {
-    margin: 3%;
-    height: 80%;
-    width: 95%;
-    position: relative;
-    object-fit: cover;
-    /* border: 3px solid var(--primary);
-    border-radius: 10px; */
-    z-index: 100;
-}
-
-.latestWorkImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    border: 3px solid var(--primary);
-    border-radius: 10px;
-
-
-}
-
-
-
-
-.buttonContainer {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    margin: 5px;
-    padding: 0.8em;
-    height: 3em;
-    /* border: 2px solid plum; */
-}
-  
-  .buttonWrapper {
-    /* height: 3em; */
-    color: var(--background);
-
-    padding: 1em;
-    border-radius: 0.75em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--mainText);
-    background-color: var(--main);
-    position: relative;
-    /* opacity: 0.75; */
-    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--mainText);
-    transition: all 300ms; 
-
-  
-}
-
-.buttonText{
-    color: var(--background);
-}
-  
-   input[type="submit"]{
-    color: var(--background);
-
-
-  }
-  
-  
-
-
-  .buttonWrapper:hover {
-    animation: boxShadowWave 1s linear infinite;
-    /* background-color: #6582e9; */
-    background-color: var(--purple);
-    transition: background-color 1s linear ;
-}
-
-
- .buttonWrapper:active{
-    /* margin-top: 10px;
-    margin-left: 10px; */
-    font-size:  0.9em;
-    padding: 0.9em;
-    border-radius: 0.75em;
-    /* box-shadow: 0.1px 0.1px var(--primary), 0.2px 0.2px var(--green), 0.3px 0.3px var(--yellow), 0.4px 0.4px var(--orange), 0.5px 0.5px var(--red), 0.6px  0.6px var(--mainText); */
-    transition: all 300ms linear; 
-
- 
-}
-
 
 @keyframes boxShadowWave {
     0% {
 
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--purple);
     }
     20% {
 
-        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow), 12px  12px var(--purple);
     }
     40% {
-        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green), 12px  12px var(--purple);
     }
     60% {
-        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary), 12px  12px var(--purple);
     }
     80% {
-        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--purple);
     }
     100% {
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--mainText);
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--purple);
     }
 }
 
 
 @keyframes textRainbow {
     0% {
-        color: var(--yellow);
+        color: var(--mainText);
+    }
+
+    10% {
+        color: var(--main);
     }
 
     20% {
-        color: var(--yellow);
+        color: var(--purple);
+    }
+
+    30% {
+        color: var(--primary);
     }
 
     40% {
+        color: var(--red);
+    }
+
+    50% {
         color: var(--orange);
     }
 
     60% {
-        color: var(--red);
+        color: var(--yellow);
+    }
+
+    70% {
+        color: var(--secondary);
     }
 
     80% {
-        color: var(--primary);
+        color: var(--green);
     }
 
+    90% {
+        color: var(--main);
+    }
+    
     100% {
-        color: var(--green);
+        color: var(--mainText);
+    }
+
+
+
+    100% {
+        color: var(--yellow);
     }
 }
 
-
-/* 
-#responseToSubmitContainer {
-    display: none;
-} */
+  

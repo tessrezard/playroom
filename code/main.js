@@ -6,6 +6,7 @@ console.log('Hey!!');
 //////////////////////////////////////////////////////////////////////////
 // MAKE AN OBJECT FROM THE CSS ROOT COLOURS
 
+
 const CssRootColors = document.styleSheets[0].cssRules[1].style;
 
 let rootColorNames = [];
@@ -88,7 +89,7 @@ function createObject(keys, values) {
 
 ///////////////////////////////////////////////////////////
 // These next two functions are supposted to work together, they iterate
-//through wach color and reasign it tpo the next, so as to have the stars change color.
+//through each color and reasign it to the next, so as to have the stars change color ideally on hover?.
 //it's not working: it is iterating though alright, but i can't get HTML to load every iterating, so the 
 //stars DO NOT change color :(
     const reset = (n) => {
@@ -99,33 +100,37 @@ function createObject(keys, values) {
             const starX = document.getElementById(`star${i}`);
             if(CssRootColors[rootIndex] === '--background'){
                 rootIndex++;
+                console.log('in if of if we get to background colour', rootIndex);
             }
-
             starX.style.color = `var(${CssRootColors[rootIndex]})`;
+            console.log('starX.style.color is ', starX.style.color)
             rootIndex++;
+            console.log('updated the root index to ',rootIndex++)
             if (rootIndex > CssRootColors.length - 1) {
                  rootIndex = 0;
+                 console.log('full circle, back to beginning‚')
             }
             // console.log('rootIndex: ' , rootIndex);
         }
   }
 
-  const callReset = () => {
+  const callReset = async() => {
     while (true){
         for (let x = 0; x < CssRootColors.length; x++){
             console.log('x : ', x);
-            reset(x);
+            // await reset(x);
             // setTimeout(callReset, 1.0 * 1000);
 
         }
     }
     
   }
+
 ///////////////////////////////////////////////////////////
 
 
 // setTimeout(callReset, 1.0 * 1000);
-// setTimeout(reset, 2.0 * 1000);
+setTimeout(reset(), 3.0 * 1000);
 
 // const callResetAgain = () => {
 //         reset(2);

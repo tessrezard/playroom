@@ -1,22 +1,48 @@
+
+
 .allProjectsContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.projectContainer {
-    width: 48%;
+.projectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
     border-radius: 20px;
     padding: 0.5em;
     margin: 0.5em;
     background-color: var(--main);
     border: 3px solid var(--primary);
+}
+
+.projContainer{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.projWindowContainer{
+    width: 60%;
+    margin: 1em;
+}
+
+.projInfoContainer{
+    margin: 1em;
+    width: 30%;
+    color: var(--background);
 
 }
 
 .windowContainer {
-    height: 98%;
-    width: 95%;
+    margin: 1em;
+    /* height: 98%; */
+    width: 100%;
     background-color: var(--background);
     border: 3px solid var(--primary);
     border-radius: 18px;
@@ -27,118 +53,8 @@
     display: flex;
     flex-flow: column;
 }
-
-
-
-
-.tabBarContainer {
-    height: 2.5rem;
-    width: 100%;
-    /* background-color: #cf2ade; */
-    border-radius: 14px 14px 0 0; 
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-
-
-.starsTabBarContainer {
-    background-color: var(--background);
-    /* border-radius: 13px 0 13px 0;  */
-    border-radius: 13px 0 0 0; 
-    width: 70px;
-    z-index: 10;
-}
-
-
-.headingTabBarContainer {
-    background-color: var(--primary);
-    width: 100%;
-    z-index: 10;
-}
-
-.negSpaceTabBarContainer {
-    /* background-color: #fff3ea; */
-    border-radius: 0 13px 0 0; 
-    width: 340px;
-    z-index: 10;
-}
-
-.starsTabBar {
-    background-color: var(--primary);
-    border-radius: 13px 0 13px 0; 
-    width: 70px;
-    height: 100%;
-    z-index: 10;
-}
-
-.headingTabBar {
-    background-color: var(--background);
-    width: 100%;
-    height: 85%;
-    z-index: 10;
-    position: relative;
-    top: 6px;;
-    border-radius: 13px 13px 0 0; 
-
-}
-
-.negSpaceTabBar {
-    background-color: var(--primary);
-    border-radius: 0 13px 0 13px; 
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-
-
-.tabStars {
-    display: inline-flex;
-    position: relative;
-    top: 0.7em;
-    left: 0.5em;
-    align-items: center;
-    height: auto;
-    width: auto;
-    font-size: 1em;
-}
-
-.tabStar{
-    margin: 0.15em;
-}
-
-.tabStar1{
-    /* --red: #d55be0; */
-    color:  hsl(295, 74%, 61%);
-
-}
-
-.tabStar2{
-    color: var(--yellow);
-}
-
-.tabStar3{
-    color: #44aa6d;
-    /* color: var(--green); */
-
-}
-
-
-.tabHeadingWrapper {
-    display: inline-flex;
-    flex-flow: nowrap;
-    position: relative;
-    top: 0.5em;
-    left: 1em;
-    align-items: center;
-    height: auto;
-    width: auto;
-    font-size: 1em;
-}
-
-.tabHeading {
-    font-size: 1em;
-    letter-spacing: .05em;
+@media screen and (max-width: 1980) {
+    
 }
 
 
