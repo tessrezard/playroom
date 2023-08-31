@@ -1,0 +1,240 @@
+
+
+.allProjectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    border-radius: 20px;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: var(--main);
+    border: 3px solid var(--primary);
+}
+
+.projContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0 3% 0;
+    /* justify-content: space-evenly; */
+}
+
+
+
+.narrowProjTopLine{
+    color: var(--background);
+    display: none;
+    margin: 0.2em;
+    text-align: center;
+}
+
+.projWindowContainer{
+    width: 60%;
+    margin: 1em;
+}
+
+.projInfoContainer{
+    margin: 0.25em;
+    width: 30%;
+    color: var(--background);
+}
+
+.windowContainer {
+    margin: 1em;
+    /* height: 98%; */
+    width: 100%;
+    background-color: var(--background);
+    border: 3px solid var(--primary);
+    border-radius: 18px;
+    border-collapse: separate; 
+    margin: auto;
+    position: relative;
+    top: 1%;
+    display: flex;
+    flex-flow: column;
+}
+
+
+/*--------making the depth of the tab bar in the window container shallower.---------*/
+    .rainbowStackContainer {
+        height: 95%;
+        width: 90%;
+    }
+    /* ---account for shortening the tab height becasue moving title. ---*/
+    .tabBarContainer {
+        height: 2rem;
+    }
+    .starsTabBarContainer, .starsTabBar {
+        width: 70px;
+    }
+    .headingTabBar {
+        top: 5px;;
+    }
+    .tabStars {
+        top: 0.3em;
+        left: 0.5em;
+        font-size: 1em;
+    }
+    .negSpaceTabBarContainer{
+        width: 100%;   
+    }
+    .negSpaceTabBar {
+        width: 100%;
+        margin: 0;
+    }
+    
+
+
+
+.purpleHeader{
+    color: var(--primary);
+}
+.purpleBorder {
+    border: 3px solid var(--purple);
+}
+.purpleBackground {
+    background-color: var(--purple);
+}
+
+.secondaryBorder {
+    border: 3px solid var(--secondary);
+}
+.secondaryBackground {
+    background-color: var(--secondary);
+}
+
+.greenBorder {
+    border: 3px solid var(--green);
+}
+.greenBackground {
+    background-color: var(--green);
+}
+
+
+/* -------button things----------*/
+
+    .projButton{
+        box-shadow:  8px  8px var(--purple);
+        font-size: 0.9em;
+        width: 180px ;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+
+    }
+
+    .projButton:hover {
+        animation: none;
+        background-color: var(--main);
+    }
+
+    .projButton:active {
+        box-shadow:  1px  1px var(--purple);
+        margin: 13px 0 0 8px;
+        transition: all 100ms linear; 
+
+    }
+
+
+
+/* ---------------------------------------MEDIA QUERIES---------------------------------------------*/
+
+
+
+
+@media screen and (max-width: 985px) {
+
+    .tabHeading {
+        display: none;   
+    }
+}
+
+
+
+@media screen and (max-width: 790px) {
+    
+        nav {
+            display: block;
+            justify-content: center;
+        }
+        nav a {
+        padding-top: 0.75em;
+        color: var(--primary);
+        }
+        .navLeft{
+            text-align: left;
+        }
+        .navRight{
+            text-align: right;
+        }
+        .rainbowStackContainer {
+            height: 95%;
+            width: 90%;
+        }
+
+        /* account for shortening the tab height becasue moving title.  */
+        .tabBarContainer {
+            height: 2rem;
+        }
+        .starsTabBarContainer, .starsTabBar {
+            width: 70px;
+        }
+        .headingTabBar {
+            top: 5px;;
+        }
+        .tabStars {
+            top: 0.3em;
+            left: 0.5em;
+            font-size: 1em;
+        }
+        .negSpaceTabBarContainer{
+            width: 100%;   
+        }
+
+}
+
+@media screen and (max-width: 700px) {
+    .projWindowContainer{
+        width: 95%;
+        margin: 1em;
+    }
+
+    .narrowProjTopLine{
+        display: inline;
+    }
+
+    .wideProjTopLine{
+        display: none;
+    }
+
+    .projContainer{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .narrowProjHeader{
+        display: block;
+    }
+    .wideProjHeader{
+        display: none;
+    }
+    .projInfoContainer{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        margin: 0.25em;
+        width: 90%;
+        color: var(--background);
+    }
+}

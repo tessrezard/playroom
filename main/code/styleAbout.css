@@ -31,24 +31,25 @@
 }
 
 .aboutMe {
-    width: 75%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
 }
 
 #bio {
-    width: 70%;
+    width: 60%;
     position: relative;
-    right: 10%;
+    margin: 2%;
     text-align: justify ;
     line-height: 1.3em;
 }
 
 #picContainer {
-    height: 40%;
-    width: 30%;
+    height: 50%;
+    width: 25%;
     /* /* border: 3px solid var(--main); */
-    border-radius: 30px; */
+    border-radius: 30px; 
 
 }
 

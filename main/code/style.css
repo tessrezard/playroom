@@ -7,14 +7,14 @@
 
 /* Accent Colours */
 :root {
-    --primary: #e4a8ec;
-    --secondary: #cadf92;
-    --green: #68cd8d;
+    --primary: #c1b1ff;
+    --secondary: #c4d69c;
+    --green: #acd0c2;
     --yellow: #FFD913;
     --orange: #f8b281;
     --red: #f191bb;
     --purple: #9e91f1;
-}
+} 
 
 /* accent and base colours are seperated for easier ease of JS access to accent colours 
 
@@ -51,7 +51,7 @@ header {
 
 #headerTitle {
     font-family: 'Sansita', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     text-align: center;
     padding: 20px;
@@ -70,10 +70,12 @@ h1 {
 
 h2 {
     font-family: 'Sansita', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     /* color: #000000; */
-    color: var(--primary);
+    color: var(--mainText);
+
     margin: 0;
+    text-align: center;
 
 }
 nav {
@@ -120,7 +122,7 @@ aside{
     overflow: hidden;
     display: inline-flex;
     justify-content: center;
-    margin: 3% 5%;
+    margin: 1% 5%;
     letter-spacing: 0.5em;
     /* border: 1px solid rgb(78, 68, 218); */
 }
@@ -141,7 +143,20 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     font-size: 1.5rem;
 }
 
-
+#welcome{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+#welcomeHeadline{
+    color: var(--purple);
+}
+#welcomeText{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+}
 
 .mainSection {
     height: fit-content ;
@@ -157,10 +172,41 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 
+/* ----------main section heading-------------- */
+    /* -------for wider screens : pill heading ------ */
+        .pillHeadingContainer {
+            width: 40%;
+            height: 60px;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            display: flex;
+            flex-flow: wrap;
+            position: relative;
+            bottom: 65px;
+        }
+        .pillHeadingWrapper {
+            z-index: 9;
+            width: 75%;
+            border: 3px solid var(--mainText);
+            background-color: var(--primary);
+            flex-flow: column wrap; 
+            border-radius: 20px;
+            position: absolute;
+        }
+        .pillHeading {
+            letter-spacing: 0.02em;
+            font-weight: bold;
+            margin: 0 auto 5% auto;
+        }
 
-.sectionTitle {
-    margin: 0 auto 3rem auto;
-}
+    /* -------for narrower screens : pill heading ------ */
+
+        .sectionTitle {
+            display: none;
+            margin: 0 auto 5% auto;
+        }
+/* ----------------------------------------------- */
 
 
 .rainbowStackContainer {
@@ -185,14 +231,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 
-.forMobileProjHeader{
+.narrowProjHeader{
+    display: none;
     position: relative;
     left: 7px;
     padding: 0.25em;
-    display: none;
     text-align: center;
-
-
+    color: var(--primary);
 }
     
 
@@ -214,15 +259,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .tabBarContainer {
-    height: 4rem;
+    height: 3rem;
     width: 100%;
     /* background-color: #cf2ade; */
     border-radius: 14px 14px 0 0; 
     display: inline-flex;
     justify-content: space-between;
 }
-
-
 
 .starsTabBarContainer {
     background-color: var(--background);
@@ -231,14 +274,11 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: 80px;
     z-index: 10;
 }
-
-
 .headingTabBarContainer {
     background-color: var(--primary);
     width: 100%;
     z-index: 10;
 }
-
 .negSpaceTabBarContainer {
     /* background-color: #fff3ea; */
     border-radius: 0 13px 0 0; 
@@ -248,12 +288,11 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 .starsTabBar {
     background-color: var(--primary);
-    border-radius: 13px 0 13px 0; 
-    width: 80px;
+    border-radius: 12px 0 13px 0; 
+     width: 80px;
     height: 100%;
     z-index: 10;
 }
-
 .headingTabBar {
     background-color: var(--background);
     width: 100%;
@@ -263,7 +302,6 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     top: 11px;;
     border-radius: 13px 13px 0 0; 
 }
-
 .negSpaceTabBar {
     background-color: var(--primary);
     border-radius: 0 13px 0 13px; 
@@ -272,39 +310,30 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     z-index: 10;
 }
 
-
-
 .tabStars {
     display: inline-flex;
     position: relative;
-    top: 0.8em;
+    top: 0.4em;
     left: 0.3em;
     align-items: center;
     height: auto;
     width: auto;
     font-size: 1.25em;
 }
-
 .tabStar{
     margin: 0.15em;
 }
-
 .tabStar1{
     /* --red: #d55be0; */
     color:  hsl(295, 74%, 61%);
-
 }
-
 .tabStar2{
     color: var(--yellow);
 }
-
 .tabStar3{
     color: #44aa6d;
     /* color: var(--green); */
-
 }
-
 
 .tabHeadingWrapper {
     display: inline-flex;
@@ -317,16 +346,21 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: auto;
     font-size: 1em;
 }
-
 .tabHeading {
     font-family: 'Sansita', sans-serif;
     font-size: 1.5em;
     letter-spacing: .05em;
     position: relative;
-    top: 3px;    
+    top: 31x;
+    color: var(--purple);    
 }
 
 
+
+.windowContentContainer{
+    display: flex;
+    justify-content: center;
+}
 .latestWorkImgWrapper {
     margin: 3%;
     height: 80%;
@@ -342,6 +376,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: auto;
     z-index: 1;
     border: 3px solid var(--primary);
     border-radius: 10px;
@@ -413,6 +448,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 /* ---------------------------------------MEDIA QUERIES---------------------------------------------*/
 
+@media screen and (min-width: 1500px) {
+
+    .mainSection {
+        width: 82.63375rem;
+        margin: auto;
+    }
+}
 
 @media screen and (max-width: 1000px) {
     body{
@@ -424,6 +466,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         margin: 0;
         border: 0px;
         /* justify-content: center; */
+    }
+    .pillHeadingContainer, .pillHeadingWrapper, .pillHeading {
+        display: none;
+    }
+
+    .sectionTitle{
+        display: block;
     }
     .rainbowStackContainer {
         height: 90%;
@@ -497,12 +546,15 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         letter-spacing: .05em;
         position: relative;
         top: 3px;    
+
     }
     .negSpaceTabBarContainer{
         width: 100%;   
     }
-    .forMobileProjHeader{
+    .narrowProjHeader{
         display: inline;
+        color: var(--primary);
+
     }
 }
 
@@ -669,3 +721,37 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
   
+
+
+
+
+
+
+
+.pillHeadingContainer {
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    bottom: 65px;
+  }
+  
+  
+  .pillHeadingWrapper {
+    z-index: 9;
+    width: 75%;
+    border: 3px solid var(--mainText);
+    background-color: var(--primary);
+    flex-flow: column wrap; */
+    border-radius: 20px;
+    position: absolute;
+  }
+  
+  .pillHeading {
+    letter-spacing: 0.02em;
+    font-weight: bold;
+  }
