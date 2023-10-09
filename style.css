@@ -4,7 +4,6 @@
 
 /* NO NOT REORDER !!! JS is expecting ':root {}' to be at cssRules[1] */
 /* These colours must remain hexadecimal colours for JS */
-
 /* Accent Colours */
 :root {
     --primary: #c1b1ff;
@@ -17,7 +16,6 @@
 } 
 
 /* accent and base colours are seperated for easier ease of JS access to accent colours 
-
 /* Base Colours */
 :root {
     --main: #3c5bce;
@@ -85,18 +83,21 @@ nav {
     justify-content: space-between;
     /* width: 15%; */
     /* border: 1px solid rgb(221, 105, 209); */
+    color: var(--mainText);
 }
-
-
 
 a {
     text-decoration: none;
     cursor: pointer;
     /* color: #000000; */
+    color: var(--mainText);
+
 }
 
 nav a {
     padding: 0 0.75em 0 0.75em;
+    color: var(--mainText);
+
 }
 
 nav a:visited,  a#headerTitle:visited{
