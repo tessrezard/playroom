@@ -97,7 +97,6 @@ a {
 nav a {
     padding: 0 0.75em 0 0.75em;
     color: var(--mainText);
-
 }
 
 nav a:visited,  a#headerTitle:visited{
