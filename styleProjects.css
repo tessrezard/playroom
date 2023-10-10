@@ -24,11 +24,9 @@
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    margin: 3% 0 3% 0;
+    margin: 1% 0 1% 0;
     /* justify-content: space-evenly; */
 }
-
-
 
 .narrowProjTopLine{
     color: var(--background);
@@ -107,6 +105,7 @@
 .purpleBoxShad {
     box-shadow: 8px  8px var(--purple);
 }
+
 
 .secondaryHeader{
     color: var(--secondary);
@@ -230,9 +229,14 @@
         width: 100%;
         justify-content: center;
     }
+
+    .narrowProjBtn{
+        display: inline;
+    }
     .narrowProjHeader{
         display: block;
     }
+    
     .wideProjHeader{
         display: none;
     }
