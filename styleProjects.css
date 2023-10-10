@@ -99,18 +99,28 @@
     color: var(--primary);
 }
 .purpleBorder {
-    border: 3px solid var(--purple);
+    border: 2px solid var(--purple);
 }
 .purpleBackground {
     background-color: var(--purple);
 }
+.purpleBoxShad {
+    box-shadow: 8px  8px var(--purple);
+}
 
+.secondaryHeader{
+    color: var(--secondary);
+}
 .secondaryBorder {
-    border: 3px solid var(--secondary);
+    border: 2px solid var(--secondary);
 }
 .secondaryBackground {
     background-color: var(--secondary);
 }
+.secondaryBoxShad {
+    box-shadow: 8px  8px var(--secondary);
+}
+
 
 .greenBorder {
     border: 3px solid var(--green);
@@ -123,14 +133,12 @@
 /* -------button things----------*/
 
     .projButton{
-        box-shadow:  8px  8px var(--purple);
         font-size: 0.9em;
         width: 180px ;
         overflow: hidden;
         display: flex;
         flex-flow: row nowrap;
         position: relative;
-
     }
 
     .projButton:hover {
@@ -142,7 +150,6 @@
         box-shadow:  1px  1px var(--purple);
         margin: 13px 0 0 8px;
         transition: all 100ms linear; 
-
     }
 
 
