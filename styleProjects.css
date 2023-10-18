@@ -121,11 +121,75 @@
 }
 
 
+.greenHeader{
+    color: var(--green);
+}
 .greenBorder {
-    border: 3px solid var(--green);
+    border: 2px solid var(--green);
 }
 .greenBackground {
     background-color: var(--green);
+}
+.greenBoxShad {
+    box-shadow: 8px  8px var(--green);
+}
+
+
+
+.primaryHeader{
+    color: var(--primary);
+}
+.primaryBorder {
+    border: 2px solid var(--primary);
+}
+.primaryBackground {
+    background-color: var(--primary);
+}
+.primaryBoxShad {
+    box-shadow: 8px  8px var(--primary);
+}
+
+
+.yellowHeader{
+    color: var(--yellow);
+}
+.yellowBorder {
+    border: 2px solid var(--yellow);
+}
+.yellowBackground {
+    background-color: var(--yellow);
+}
+.yellowBoxShad {
+    box-shadow: 8px  8px var(--yellow);
+}
+
+
+.orangeHeader{
+    color: var(--orange);
+}
+.orangeBorder {
+    border: 2px solid var(--orange);
+}
+.orangeBackground {
+    background-color: var(--orange);
+}
+.orangeBoxShad {
+    box-shadow: 8px  8px var(--orange);
+}
+
+
+
+.redHeader{
+    color: var(--red);
+}
+.redBorder {
+    border: 2px solid var(--red);
+}
+.redBackground {
+    background-color: var(--red);
+}
+.redBoxShad {
+    box-shadow: 8px  8px var(--red);
 }
 
 
@@ -236,7 +300,7 @@
     .narrowProjHeader{
         display: block;
     }
-    
+
     .wideProjHeader{
         display: none;
     }
