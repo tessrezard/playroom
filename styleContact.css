@@ -129,3 +129,10 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
   }
+
+
+  .email {
+    color: var(--main);
+    font-weight: 700;
+    text-decoration: underline;
+  }
