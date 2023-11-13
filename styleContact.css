@@ -1,35 +1,49 @@
+.subHeading {
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+}
 
-#responseToSubmitContainer {
+
+.email {
+    color: var(--main);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 280px) {
+    main {
+        padding: 1rem;
+    }
+
+}
+
+/* I originally had a form in here but no backend so it's shelved for now */
+/* #responseToSubmitContainer {
     display: none;
     color: var(--main);
     justify-content: center;
     flex-flow: column;
     margin-top: 3%;
-} 
+}  */
 
-h3.responseToSubmit {
+/* h3.responseToSubmit {
     margin: 1% auto 0.5% auto;
     text-align: center;
     display: inline;
 
-}
+} */
 
-h4.responseToSubmit {
+/* h4.responseToSubmit {
     margin: 1% auto 7% auto;
     text-align: center;
-}
-.inlineStar{
+} */
+/* .inlineStar{
     color: var(--main);
-}
+} */
 
 
-.subHeading{
-text-align: center;
-margin: auto;
-font-weight: 700;
-}
-
-form {
+/* form {
     font-size: 1.1rem;
     display: flex;
     justify-content: space-around;
@@ -71,7 +85,7 @@ label, .inputContainer aside{
  #message,  #feedback{
     height: 7em;
     
-}
+} */
 
 
 
@@ -87,10 +101,10 @@ input[type="text"], input[type="number"] {
   input[type="radio"] {
     margin-left: 12px;
   } */
-  
 
 
-.formAsterix {
+
+/* .formAsterix {
     font-size: 1.2em;
     padding: 0.1em;
     position: relative;
@@ -123,7 +137,6 @@ input[type="text"], input[type="number"] {
 }
 
 input[type=submit] {
-    /* padding: 15px 15px; */
     background: none;
     border: 0 none;
     cursor: pointer;
@@ -131,9 +144,4 @@ input[type=submit] {
     border-radius: 5px;
   }
 
-
-  .email {
-    color: var(--main);
-    font-weight: 700;
-    text-decoration: underline;
-  }
+ */
