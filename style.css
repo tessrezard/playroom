@@ -3,8 +3,9 @@
 }
 
 /* NO NOT REORDER !!! JS is expecting ':root {}' to be at cssRules[1] */
-/* These colours must remain hexadecimal colours for JS */
-/* Accent Colours */
+/* These colors must remain hexadecimal colors for JS */
+
+/* Accent colors */
 :root {
     --primary: #c1b1ff;
     --secondary: #c4d69c;
@@ -13,17 +14,15 @@
     --orange: #f8b281;
     --red: #f191bb;
     --purple: #9e91f1;
-} 
+}
 
-/* accent and base colours are seperated for easier ease of JS access to accent colours 
-/* Base Colours */
+/* accent and base colors are separated for easier ease of JS access to accent colours 
+/* Base colors */
 :root {
     --main: #3c5bce;
     --background: #fff0e4;
     --mainText: #000000;
 }
-
-
 
 body {
     font-family: 'Work Sans', sans-serif;
@@ -31,7 +30,6 @@ body {
     margin: 0 5%;
     background-color: var(--background);
     color: var(--mainText);
-    /* border: 1px solid black; */
 }
 
 header {
@@ -42,9 +40,6 @@ header {
     flex-flow: column, wrap;
     font-family: 'Sansita', sans-serif;
     border-bottom: 2px solid var(--mainText);
-    /* border: 1px solid rgb(43, 207, 87); */
-
-
 }
 
 #headerTitle {
@@ -53,35 +48,28 @@ header {
     font-weight: 700;
     text-align: center;
     padding: 20px;
-    /* color: #000000; */
-    /* border: 1px solid rgb(221, 105, 209); */
 }
-
-
 
 h1 {
     font-family: 'Yeseva One', Serif;
+    font-family: 'Sansita', sans-serif;
     font-size: 3rem;
-    /* color: #000000; */
     color: var(--mainText);
 }
 
 h2 {
     font-family: 'Sansita', sans-serif;
     font-size: 2.5rem;
-    /* color: #000000; */
     color: var(--mainText);
     margin: 0;
     text-align: center;
-
 }
+
 nav {
     font-size: 1.25rem;
     letter-spacing: 0.05em;
     display: inline-flex;
     justify-content: space-between;
-    /* width: 15%; */
-    /* border: 1px solid rgb(221, 105, 209); */
     color: var(--mainText);
 }
 
@@ -90,7 +78,6 @@ a {
     cursor: pointer;
     /* color: #000000; */
     color: var(--mainText);
-
 }
 
 nav a {
@@ -98,22 +85,40 @@ nav a {
     color: var(--mainText);
 }
 
-nav a:visited,  a#headerTitle:visited{
+nav a:visited,
+a#headerTitle:visited {
     color: var(--mainText);
 }
 
-nav a:hover , a#headerTitle:hover{
+nav a:hover,
+a#headerTitle:hover {
     color: var(--main);
-    transition: color 1s ease-in-out; /* Add a smooth transition effect for color changes */
+    transition: color 1s ease-in-out;
+    /* Add a smooth transition effect for color changes */
     animation: textRainbow 7s linear infinite;
-
 }
 
 
-aside{
+aside {
     font-size: smaller;
     font-style: italic;
 }
+
+
+main {
+    height: fit-content;
+    width: 98%;
+    border-radius: 30px;
+    padding: 2em 1em;
+    margin: 10px;
+    border: 3px solid var(--mainText);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-flow: column;
+}
+
+
 
 #tumbleStarContainer {
     height: 3%;
@@ -131,10 +136,11 @@ aside{
 }
 
 .tumbleStar {
-    transition: color 0.25s ease; /* Add a smooth transition effect for color changes */
+    transition: color 0.25s ease;
+    /* Add a smooth transition effect for color changes */
 }
 
-/* THIS STYLES THE STARS IN TUMBLESTARS <p>>
+/* THIS STYLES THE STARS IN TUMBLE-STARS <p>>
 THAT <p> IS REPLACED WITH INDIVIDUAL SPANS FOR EACH STAR EACH WITH THE CLASS tumbleStar 
 THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 .tumbleStar {
@@ -142,96 +148,50 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     font-size: 1.5rem;
 }
 
-#welcome{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-#welcomeHeadline{
-    color: var(--purple);
-}
-#welcomeText{
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    padding: 2%;
-}
-
-.mainSection {
-    height: fit-content ;
-    width: 98%;
-    border-radius: 30px;
-    padding: 2em 1em ;
-    margin: 10px;
-    border: 3px solid var(--mainText);
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-flow: column;
-}
 
 
 /* ----------main section heading-------------- */
-    /* -------for wider screens : pill heading ------ */
-        
-        .pillHeadingContainer {
-            width: 40%;
-            height: 60px;
-            text-align: center;
-            justify-content: center;
-            margin: auto;
-            display: flex;
-            flex-flow: wrap;
-            position: relative;
-            bottom: 65px;
-        }
-        .pillHeadingWrapper {
-            z-index: 9;
-            width: 75%;
-            border: 3px solid var(--mainText);
-            background-color: var(--primary);
-            flex-flow: column wrap; 
-            border-radius: 20px;
-            position: absolute;
-        }
-        .pillHeading {
-            letter-spacing: 0.02em;
-            font-weight: bold;
-            margin: 0 auto 5% auto;
-        }
+/* -------for wider screens : pill heading ------ */
 
-    /* -------for narrower screens : pill heading ------ */
+.pillHeadingContainer {
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    bottom: 65px;
+}
 
-        .sectionTitle {
-            display: none;
-            margin: 0 auto 5% auto;
-        }
+.pillHeadingWrapper {
+    z-index: 9;
+    width: 75%;
+    border: 3px solid var(--mainText);
+    background-color: var(--primary);
+    flex-flow: column wrap;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.pillHeading {
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    margin: 0 auto 5% auto;
+}
+
+/* -------for narrower screens : pill heading ------ */
+
+.sectionTitle {
+    display: none;
+    margin: 0 auto 5% auto;
+}
+
 /* ----------------------------------------------- */
 
 
-.rainbowStackContainer {
-    height: 95%;
-    width: 90%;
-    /* border: 3px solid rgb(136, 120, 229); */
-    border-radius: 20px;
-    padding: 30px;
-    margin: 10px;
-    position: relative;
-    right: 1.225em;
-    background-color: var(--main);
-    border: 3px solid var(--primary);
-    box-shadow: 10px -10px 0 -3px var(--main), 10px -10px var(--green),
-        20px -20px 0 -3px var(--main), 20px -20px var(--yellow),
-        30px -30px 0 -3px var(--main), 30px -30px var(--orange),
-        40px -40px 0 -3px var(--main), 40px -40px var(--red);
-}
-
-.rainbowStackContainer:hover {
-    animation: stackShadowWave 1s linear infinite;
-}
-
-
-.narrowProjHeader{
+.narrowProjHeader {
     display: none;
     position: relative;
     left: 7px;
@@ -239,7 +199,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     text-align: center;
     color: var(--primary);
 }
-    
+
 
 /*  */
 
@@ -250,7 +210,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     background-color: var(--background);
     border: 3px solid var(--primary);
     border-radius: 18px;
-    border-collapse: separate; 
+    border-collapse: separate;
     margin: auto;
     position: relative;
     top: 1%;
@@ -262,7 +222,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     height: 3rem;
     width: 100%;
     /* background-color: #cf2ade; */
-    border-radius: 14px 14px 0 0; 
+    border-radius: 14px 14px 0 0;
     display: inline-flex;
     justify-content: space-between;
 }
@@ -270,41 +230,46 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 .starsTabBarContainer {
     background-color: var(--background);
     /* border-radius: 13px 0 13px 0;  */
-    border-radius: 13px 0 0 0; 
+    border-radius: 13px 0 0 0;
     width: 80px;
     z-index: 10;
 }
+
 .headingTabBarContainer {
     background-color: var(--primary);
     width: 100%;
     z-index: 10;
 }
+
 .negSpaceTabBarContainer {
     /* background-color: #fff3ea; */
-    border-radius: 0 13px 0 0; 
+    border-radius: 0 13px 0 0;
     width: 340px;
     z-index: 10;
 }
 
 .starsTabBar {
     background-color: var(--primary);
-    border-radius: 12px 0 13px 0; 
-     width: 80px;
+    border-radius: 12px 0 13px 0;
+    width: 80px;
     height: 100%;
     z-index: 10;
 }
+
 .headingTabBar {
     background-color: var(--background);
     width: 100%;
     height: 85%;
     z-index: 10;
     position: relative;
-    top: 11px;;
-    border-radius: 13px 13px 0 0; 
+    top: 11px;
+    ;
+    border-radius: 13px 13px 0 0;
 }
+
 .negSpaceTabBar {
     background-color: var(--primary);
-    border-radius: 0 13px 0 13px; 
+    border-radius: 0 13px 0 13px;
     width: 340px;
     height: 100%;
     z-index: 10;
@@ -320,17 +285,21 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: auto;
     font-size: 1.25em;
 }
-.tabStar{
+
+.tabStar {
     margin: 0.15em;
 }
-.tabStar1{
+
+.tabStar1 {
     /* --red: #d55be0; */
-    color:  hsl(295, 74%, 61%);
+    color: hsl(295, 74%, 61%);
 }
-.tabStar2{
+
+.tabStar2 {
     color: var(--yellow);
 }
-.tabStar3{
+
+.tabStar3 {
     color: #44aa6d;
     /* color: var(--green); */
 }
@@ -346,22 +315,41 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: auto;
     font-size: 1em;
 }
+
 .tabHeading {
     font-family: 'Sansita', sans-serif;
     font-size: 1.5em;
     letter-spacing: .05em;
     position: relative;
     top: 31x;
-    color: var(--purple);    
+    color: var(--purple);
 }
 
 
-
-.windowContentContainer{
+.windowContentContainer {
     display: flex;
     justify-content: center;
 }
+/* 
 .latestWorkImgWrapper {
+    margin: 3%;
+    height: 80%;
+    width: 95%;
+    position: relative;
+    object-fit: cover;
+    z-index: 100;
+}
+.latestWorkImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    z-index: 1;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+} */
+
+.windowImgWrapper {
     margin: 3%;
     height: 80%;
     width: 95%;
@@ -371,8 +359,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     border-radius: 10px; */
     z-index: 100;
 }
-
-.latestWorkImg{
+.windowImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -382,22 +369,20 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     border-radius: 10px;
 }
 
-
-
 .buttonContainer {
     display: flex;
     flex-flow: row;
     align-items: center;
-    margin: 5px;
+    margin: 15px;
     padding: 0.8em;
     height: 3em;
     /* border: 2px solid plum; */
 }
-  
-  .buttonWrapper {
+
+.buttonWrapper {
     /* height: 3em; */
     color: var(--background);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 0.75em;
     display: flex;
     justify-content: center;
@@ -406,43 +391,37 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     background-color: var(--main);
     position: relative;
     /* opacity: 0.75; */
-    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--main);
-    transition: all 300ms; 
+    box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px 12px var(--main);
+    transition: all 300ms;
 
-  
+
 }
 
-.buttonText{
+.buttonText {
     color: var(--background);
 }
-  
-   input[type="submit"]{
-    color: var(--background);
 
 
-  }
-  
-  
 
 
-  .buttonWrapper:hover {
+.buttonWrapper:hover {
     animation: boxShadowWave 1s linear infinite;
     /* background-color: #6582e9; */
     background-color: var(--purple);
-    transition: background-color 1s linear ;
+    transition: background-color 1s linear;
 }
 
 
- .buttonWrapper:active{
+.buttonWrapper:active {
     /* margin-top: 10px;
     margin-left: 10px; */
-    font-size:  0.9em;
+    font-size: 0.9em;
     padding: 0.9em;
     border-radius: 0.75em;
     /* box-shadow: 0.1px 0.1px var(--primary), 0.2px 0.2px var(--green), 0.3px 0.3px var(--yellow), 0.4px 0.4px var(--orange), 0.5px 0.5px var(--red), 0.6px  0.6px var(--mainText); */
-    transition: all 300ms linear; 
+    transition: all 300ms linear;
 
- 
+
 }
 
 
@@ -457,23 +436,28 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 @media screen and (max-width: 1000px) {
-    body{
+    body {
         margin: 1%;
     }
+
     .mainSection {
         width: 98%;
-        padding: 0 ; 
+        padding: 0;
         margin: 0;
         border: 0px;
         /* justify-content: center; */
     }
-    .pillHeadingContainer, .pillHeadingWrapper, .pillHeading {
+
+    .pillHeadingContainer,
+    .pillHeadingWrapper,
+    .pillHeading {
         display: none;
     }
 
-    .sectionTitle{
+    .sectionTitle {
         display: block;
     }
+
     .rainbowStackContainer {
         height: 90%;
         width: 90%;
@@ -483,13 +467,14 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         position: relative;
         right: 1.225em;
     }
+
     .windowContainer {
         height: 98%;
         width: 98%;
         background-color: var(--background);
         border: 3px solid var(--primary);
         border-radius: 18px;
-        border-collapse: separate; 
+        border-collapse: separate;
         margin: auto;
         position: relative;
         top: 1%;
@@ -497,61 +482,75 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         flex-flow: column;
     }
 
-    .negSpaceTabBarContainer{
-        width: 25%;   
+    .negSpaceTabBarContainer {
+        width: 25%;
     }
+
     .negSpaceTabBar {
-        width: 100%;   
+        width: 100%;
     }
 }
 
-@media  screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
     nav {
         display: block;
         justify-content: center;
     }
+
     nav a {
-    padding-top: 0.75em;
-    color: var(--primary);
+        padding-top: 0.75em;
+        color: var(--primary);
     }
-    .navLeft{
+
+    .navLeft {
         text-align: left;
     }
-    .navRight{
+
+    .navRight {
         text-align: right;
     }
+
     .rainbowStackContainer {
         height: 95%;
         width: 90%;
     }
-        /* account for shortening the tab height becasue moving title.  */
+
+    /* account for shortening the tab height becasue moving title.  */
 
     .tabBarContainer {
         height: 2rem;
     }
-    .starsTabBarContainer, .starsTabBar {
+
+    .starsTabBarContainer,
+    .starsTabBar {
         width: 70px;
     }
+
     .headingTabBar {
-        top: 5px;;
+        top: 5px;
+        ;
     }
+
     .tabStars {
         top: 0.3em;
         left: 0.5em;
         font-size: 1em;
     }
+
     .tabHeading {
         display: none;
         font-size: 1.5em;
         letter-spacing: .05em;
         position: relative;
-        top: 3px;    
+        top: 3px;
 
     }
-    .negSpaceTabBarContainer{
-        width: 100%;   
+
+    .negSpaceTabBarContainer {
+        width: 100%;
     }
-    .narrowProjHeader{
+
+    .narrowProjHeader {
         display: inline;
         color: var(--primary);
 
@@ -559,16 +558,19 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 
-@media screen and (max-width: 500px ){
+@media screen and (max-width: 500px) {
 
-    .navLeft, .navRight{
+    .navLeft,
+    .navRight {
         font-size: 1em;
     }
+
     .sectionTitle {
         margin: 0;
         text-align: center;
-        font-size: 2.5em ;
+        font-size: 2.5em;
     }
+
     .rainbowStackContainer {
         height: 95%;
         width: 90%;
@@ -582,6 +584,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         border: 3px solid var(--primary);
         box-shadow: none;
     }
+
     .rainbowStackContainer:hover {
         animation: none;
     }
@@ -647,23 +650,28 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 @keyframes boxShadowWave {
     0% {
 
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px 12px var(--purple);
     }
+
     20% {
 
-        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--orange), 4px 4px var(--red), 6px 6px var(--primary), 8px 8px var(--green), 10px 10px var(--yellow), 12px 12px var(--purple);
     }
+
     40% {
-        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--yellow), 4px 4px var(--orange), 6px 6px var(--red), 8px 8px var(--primary), 10px 10px var(--green), 12px 12px var(--purple);
     }
+
     60% {
-        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--green), 4px 4px var(--yellow), 6px 6px var(--orange), 8px 8px var(--red), 10px 10px var(--primary), 12px 12px var(--purple);
     }
+
     80% {
-        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px 12px var(--purple);
     }
+
     100% {
-        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px  12px var(--purple);
+        box-shadow: 2px 2px var(--red), 4px 4px var(--primary), 6px 6px var(--green), 8px 8px var(--yellow), 10px 10px var(--orange), 12px 12px var(--purple);
     }
 }
 
@@ -708,7 +716,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     90% {
         color: var(--main);
     }
-    
+
     100% {
         color: var(--mainText);
     }
@@ -719,9 +727,3 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         color: var(--yellow);
     }
 }
-
-  
-
-
-
-
