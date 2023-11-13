@@ -200,24 +200,9 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     color: var(--primary);
 }
 
-
-/*  */
-
-
-.windowContainer {
-    height: 98%;
-    width: 95%;
-    background-color: var(--background);
-    border: 3px solid var(--primary);
-    border-radius: 18px;
-    border-collapse: separate;
-    margin: auto;
-    position: relative;
-    top: 1%;
-    display: flex;
-    flex-flow: column;
-}
-
+/* -----------------------FOR THE MOCK BROWSER WINDOWS------------------------ */
+/* these are the styles for the inside of the 'mock browser windows' */
+/* these apply across the homepage and projects page, they are relative to the respective size of window */
 .tabBarContainer {
     height: 3rem;
     width: 100%;
@@ -291,7 +276,6 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .tabStar1 {
-    /* --red: #d55be0; */
     color: hsl(295, 74%, 61%);
 }
 
@@ -301,7 +285,6 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 .tabStar3 {
     color: #44aa6d;
-    /* color: var(--green); */
 }
 
 .tabHeadingWrapper {
@@ -325,29 +308,10 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     color: var(--purple);
 }
 
-
 .windowContentContainer {
     display: flex;
     justify-content: center;
 }
-/* 
-.latestWorkImgWrapper {
-    margin: 3%;
-    height: 80%;
-    width: 95%;
-    position: relative;
-    object-fit: cover;
-    z-index: 100;
-}
-.latestWorkImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: auto;
-    z-index: 1;
-    border: 3px solid var(--primary);
-    border-radius: 10px;
-} */
 
 .windowImgWrapper {
     margin: 3%;
@@ -355,10 +319,10 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     width: 95%;
     position: relative;
     object-fit: cover;
-    /* border: 3px solid var(--primary);
-    border-radius: 10px; */
     z-index: 100;
 }
+
+/* image inside of mock browser window */
 .windowImg {
     width: 100%;
     height: 100%;
@@ -369,6 +333,12 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     border-radius: 10px;
 }
 
+
+
+
+
+
+/* This is for all all buttons site-wide, the wrappers have the specifics for the different buttons in their section css  */
 .buttonContainer {
     display: flex;
     flex-flow: row;
@@ -376,11 +346,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     margin: 15px;
     padding: 0.8em;
     height: 3em;
-    /* border: 2px solid plum; */
 }
 
+/* FOR BUTTONS : 
+    Home 'see more projects' -> projects  
+    &&  
+    About 'get in touch' -> contact */
 .buttonWrapper {
-    /* height: 3em; */
     color: var(--background);
     padding: 1rem;
     border-radius: 0.75em;
@@ -390,38 +362,23 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     border: 2px solid var(--primary);
     background-color: var(--main);
     position: relative;
-    /* opacity: 0.75; */
     box-shadow: 2px 2px var(--primary), 4px 4px var(--green), 6px 6px var(--yellow), 8px 8px var(--orange), 10px 10px var(--red), 12px 12px var(--main);
     transition: all 300ms;
-
-
 }
-
 .buttonText {
     color: var(--background);
 }
-
-
-
-
 .buttonWrapper:hover {
     animation: boxShadowWave 1s linear infinite;
     /* background-color: #6582e9; */
     background-color: var(--purple);
     transition: background-color 1s linear;
 }
-
-
 .buttonWrapper:active {
-    /* margin-top: 10px;
-    margin-left: 10px; */
     font-size: 0.9em;
     padding: 0.9em;
     border-radius: 0.75em;
-    /* box-shadow: 0.1px 0.1px var(--primary), 0.2px 0.2px var(--green), 0.3px 0.3px var(--yellow), 0.4px 0.4px var(--orange), 0.5px 0.5px var(--red), 0.6px  0.6px var(--mainText); */
     transition: all 300ms linear;
-
-
 }
 
 
@@ -496,81 +453,64 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         display: block;
         justify-content: center;
     }
-
     nav a {
         padding-top: 0.75em;
         color: var(--primary);
     }
-
     .navLeft {
         text-align: left;
     }
-
     .navRight {
         text-align: right;
     }
-
     .rainbowStackContainer {
         height: 95%;
         width: 90%;
     }
-
-    /* account for shortening the tab height becasue moving title.  */
-
+    /* account for shortening the tab height because moving title.  */
     .tabBarContainer {
         height: 2rem;
     }
-
     .starsTabBarContainer,
     .starsTabBar {
         width: 70px;
     }
-
     .headingTabBar {
         top: 5px;
         ;
     }
-
     .tabStars {
         top: 0.3em;
         left: 0.5em;
         font-size: 1em;
     }
-
     .tabHeading {
         display: none;
         font-size: 1.5em;
         letter-spacing: .05em;
         position: relative;
         top: 3px;
-
     }
-
     .negSpaceTabBarContainer {
         width: 100%;
     }
-
     .narrowProjHeader {
         display: inline;
         color: var(--primary);
-
     }
 }
 
 
 @media screen and (max-width: 500px) {
-
     .navLeft,
     .navRight {
         font-size: 1em;
     }
-
     .sectionTitle {
         margin: 0;
         text-align: center;
         font-size: 2.5em;
     }
-
     .rainbowStackContainer {
         height: 95%;
         width: 90%;
@@ -584,11 +524,9 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         border: 3px solid var(--primary);
         box-shadow: none;
     }
-
     .rainbowStackContainer:hover {
         animation: none;
     }
-
 }
 
 /* ---------------------------------------KEYFRAME ANIMATIONS---------------------------------------------*/
