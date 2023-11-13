@@ -6,9 +6,9 @@
     height: min-content;
     border-radius: 20px;
     padding: 0.5em;
-    margin: 0.5em;
+    margin: auto;
     background-color: var(--main);
-    border: 3px solid var(--primary);
+    border: none;
 }
 
 .projContainer {
@@ -306,7 +306,6 @@
 }
 
 @media screen and (max-width: 550px) {
-
     body {
         margin: 0;
     }
@@ -318,4 +317,38 @@
     .allProjectsContainer {
         border: none;
     }
+}
+
+
+
+
+/* ---------------------------------------KEYFRAME ANIMATIONS---------------------------------------------*/
+
+
+
+@keyframes borderRainbowWave {
+    0% {
+        border: 3px solid var(--primary);
+      }
+
+    20% {
+        border: 3px solid var(--red);
+        }
+
+    40% {
+        border: 3px solid var(--orange);
+         }
+
+    60% {
+        border: 3px solid var(--yellow);
+        }
+
+    80% {
+        border: 3px solid var(--green);
+        }
+
+    100% {
+        border: 3px solid var(--primary);
+        }
+
 }

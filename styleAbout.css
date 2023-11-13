@@ -10,7 +10,7 @@
     justify-content: center; 
     align-items: center;
     justify-content: center;
-    flex-flow: row;
+    flex-flow: row wrap;
 
 }
 
@@ -33,33 +33,31 @@
 .aboutMe {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-flow: row wrap;
 }
 
+/* just the text */
 #bio {
-    width: 60%;
+    width: 70%;
     position: relative;
     margin: 2%;
     text-align: justify ;
     line-height: 1.3em;
 }
-
+/* just the pic */
 #picContainer {
     height: 50%;
     width: 25%;
-    /* /* border: 3px solid var(--main); */
     border-radius: 30px; 
-
+    display: flex;
 }
-
 .picOfMe {
-    width: 100%;
+    width: 200px;
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
-    border: 6px solid var(--main);
-
+    margin: auto;
 }
 
 strong {
@@ -69,4 +67,52 @@ strong {
 
 #bio a {
     color: var(--main);
+}
+
+@media screen and (max-width: 850px) {
+    .aboutMe {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+    #bio {
+        width: 50%;
+    }
+    #picContainer {
+        height: 45%;
+        width: 40%;
+        border-radius: 30px; 
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .aboutMe {
+        width: 100%;
+    }
+    #bio {
+        width: 100%;
+        margin-bottom: 0;
+
+    }
+    #picContainer {
+        height: 45%;
+        width: 50%;
+        border-radius: 30px; 
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 280px) {
+
+    #picContainer {
+        height: 45%;
+        width: 100%;
+        border-radius: 30px; 
+        display: flex;
+    }
+
 }

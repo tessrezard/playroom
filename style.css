@@ -20,7 +20,8 @@
 /* Base colors */
 :root {
     --main: #3c5bce;
-    --background: #fff0e4;
+    --background: #fdf6f1;
+
     --mainText: #000000;
 }
 
@@ -53,7 +54,7 @@ header {
 h1 {
     font-family: 'Yeseva One', Serif;
     font-family: 'Sansita', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--mainText);
 }
 
@@ -151,6 +152,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 
 /* ----------main section heading-------------- */
+/* THESE ARE USED ACROSS : HOME; CONTACT; ABOUT; */
 /* -------for wider screens : pill heading ------ */
 
 .pillHeadingContainer {
@@ -162,23 +164,26 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     display: flex;
     flex-flow: wrap;
     position: relative;
-    bottom: 65px;
+    bottom: 55px;
 }
 
 .pillHeadingWrapper {
     z-index: 9;
     width: 75%;
     border: 3px solid var(--mainText);
-    background-color: var(--primary);
+    background-color: var(--main);
+    background-color: var(--background);
     flex-flow: column wrap;
     border-radius: 20px;
     position: absolute;
 }
 
 .pillHeading {
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.75rem;
     letter-spacing: 0.02em;
     font-weight: bold;
-    margin: 0 auto 5% auto;
+    margin: 0 auto 5px auto;
 }
 
 /* -------for narrower screens : pill heading ------ */
@@ -387,7 +392,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     body {
         margin: 1rem;
     }
@@ -404,28 +409,6 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     }
     .sectionTitle {
         display: block;
-    }
-    .rainbowStackContainer {
-        height: 90%;
-        width: 90%;
-        /* border: 3px solid rgb(136, 120, 229); */
-        margin: 1em;
-        padding: 1em;
-        position: relative;
-        right: 1.225em;
-    }
-    .windowContainer {
-        height: 98%;
-        width: 98%;
-        background-color: var(--background);
-        border: 3px solid var(--primary);
-        border-radius: 18px;
-        border-collapse: separate;
-        margin: auto;
-        position: relative;
-        top: 1%;
-        display: flex;
-        flex-flow: column;
     }
     .negSpaceTabBarContainer {
         width: 25%;
@@ -495,24 +478,43 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     }
     .sectionTitle {
         margin: 0;
+        margin-bottom: 2rem;
         text-align: center;
         font-size: 2.5em;
     }
-    .rainbowStackContainer {
-        height: 95%;
-        width: 90%;
-        /* border: 3px solid rgb(136, 120, 229); */
-        border-radius: 20px;
-        padding: 1em;
-        margin: 10px;
-        position: relative;
-        right: 0;
-        background-color: var(--main);
-        border: 3px solid var(--primary);
-        box-shadow: none;
+    
+}
+
+
+@media screen and (max-width: 350px) {
+    html{
+        width: 280px;
+        overflow-x: hidden;
+        margin: auto;
     }
-    .rainbowStackContainer:hover {
-        animation: none;
+    body{
+        width: 280px;
+        margin: auto;
+        padding: 0;
+    }
+    main{
+        width: 280px;
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        width: 250px;
+        display: block;
+        height: 150px;
+        margin: auto;
+    }
+    #headerTitle{
+        padding: 1rem;
+        text-align: center;
+        display: block;
+    }
+    nav{
+        display: flex;
     }
 }
 
