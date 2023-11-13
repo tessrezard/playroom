@@ -1,12 +1,6 @@
 .allProjectsContainer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.projectsContainer {
-    display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     width: 100%;
     height: min-content;
@@ -23,7 +17,7 @@
     justify-content: center;
     width: 100%;
     margin: 1% 0 1% 0;
-    /* justify-content: space-evenly; */
+    margin: auto;
 }
 
 .narrowProjTopLine {
@@ -59,6 +53,13 @@
     flex-flow: column;
 }
 
+
+.narrowProjHeader {
+    display: none;
+    padding: 0.25em;
+    text-align: center;
+    color: var(--primary);
+}
 
 /*--------making the depth of the tab bar in the window container shallower.---------*/
 .rainbowStackContainer {
@@ -227,35 +228,34 @@
 
 
 /* ---------------------------------------MEDIA QUERIES---------------------------------------------*/
+/* NOTE : I have not structuyred my media queires to be mobile-first. I SHOULD HAVE DONE THIS- TO BE CHANGED */
 
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 800px) {
+/* 
+    .projContainer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    } */
 
-    .tabHeading {
-        display: none;
-    }
-}
-
-
-
-@media screen and (max-width: 790px) {
-
-
-}
-
-@media screen and (max-width: 700px) {
+    /* make window fill 98% of main, center with margin, p bottom margin is 0 so add to window */
     .projWindowContainer {
         width: 95%;
-        margin: 1em;
+        margin: auto;
+        margin-top: 1rem;
     }
 
+    /* hide/reveal the wide/narrow info */
     .narrowProjTopLine {
         display: inline;
     }
-
     .wideProjTopLine {
         display: none;
     }
+
 
     .projContainer {
         display: flex;
@@ -270,6 +270,7 @@
 
     .narrowProjHeader {
         display: block;
+        margin: auto;
     }
 
     .wideProjHeader {
@@ -283,5 +284,38 @@
         margin: 0.25em;
         width: 90%;
         color: var(--background);
+    }
+    .projInfoContainer{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        margin-bottom: 0.5rem;
+    }
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+    }
+    .projContainer{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    body {
+        margin: 0;
+    }
+    main {
+        padding: 0;
+        margin: auto;
+        overflow-y: hidden;
+    }
+    .allProjectsContainer {
+        border: none;
     }
 }

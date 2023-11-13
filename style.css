@@ -59,7 +59,7 @@ h1 {
 
 h2 {
     font-family: 'Sansita', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--mainText);
     margin: 0;
     text-align: center;
@@ -191,18 +191,13 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 /* ----------------------------------------------- */
 
 
-.narrowProjHeader {
-    display: none;
-    position: relative;
-    left: 7px;
-    padding: 0.25em;
-    text-align: center;
-    color: var(--primary);
-}
 
 /* -----------------------FOR THE MOCK BROWSER WINDOWS------------------------ */
 /* these are the styles for the inside of the 'mock browser windows' */
 /* these apply across the homepage and projects page, they are relative to the respective size of window */
+/* I'm sure there is a better way to make these mock windows, 
+    but i honestly just a lots of fun making and figuring out how to do it. 
+    I wanted to make them 100% css ans HTML.  */
 .tabBarContainer {
     height: 3rem;
     width: 100%;
@@ -386,7 +381,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 @media screen and (min-width: 1500px) {
 
-    .mainSection {
+    main {
         width: 82.63375rem;
         margin: auto;
     }
@@ -394,27 +389,22 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 
 @media screen and (max-width: 1000px) {
     body {
-        margin: 1%;
+        margin: 1rem;
     }
-
-    .mainSection {
-        width: 98%;
+    main {
+        /* width: 98vw; */
         padding: 0;
-        margin: 0;
+        margin: auto;
         border: 0px;
-        /* justify-content: center; */
     }
-
     .pillHeadingContainer,
     .pillHeadingWrapper,
     .pillHeading {
         display: none;
     }
-
     .sectionTitle {
         display: block;
     }
-
     .rainbowStackContainer {
         height: 90%;
         width: 90%;
@@ -424,7 +414,6 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         position: relative;
         right: 1.225em;
     }
-
     .windowContainer {
         height: 98%;
         width: 98%;
@@ -438,11 +427,9 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         display: flex;
         flex-flow: column;
     }
-
     .negSpaceTabBarContainer {
         width: 25%;
     }
-
     .negSpaceTabBar {
         width: 100%;
     }
