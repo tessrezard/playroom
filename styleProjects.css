@@ -116,7 +116,7 @@
 }
 
 
-.secondaryHeader {
+.secondaryColor {
     color: var(--secondary);
 }
 
@@ -133,25 +133,22 @@
 }
 
 
-.greenHeader {
+.greenColor {
     color: var(--green);
 }
-
 .greenBorder {
     border: 2px solid var(--green);
 }
-
 .greenBackground {
     background-color: var(--green);
 }
-
 .greenBoxShad {
     box-shadow: 8px 8px var(--green);
 }
 
 
 
-.primaryHeader {
+.primaryColor {
     color: var(--primary);
 }
 
@@ -168,7 +165,7 @@
 }
 
 
-.yellowHeader {
+.yellowColor {
     color: var(--yellow);
 }
 
@@ -185,7 +182,7 @@
 }
 
 
-.orangeHeader {
+.orangeColor {
     color: var(--orange);
 }
 
@@ -203,7 +200,7 @@
 
 
 
-.redHeader {
+.redColor {
     color: var(--red);
 }
 
