@@ -225,7 +225,13 @@
     transition: all 100ms linear;
 }
 
-
+.projFavIcon{
+    width: 24px; 
+    height: 24px;
+    display: inline;
+    background-color: var(--background);
+    border-radius: 50%;
+}
 
 /* ---------------------------------------MEDIA QUERIES---------------------------------------------*/
 /* NOTE : I have not structuyred my media queires to be mobile-first. I SHOULD HAVE DONE THIS- TO BE CHANGED */
