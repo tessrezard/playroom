@@ -424,8 +424,8 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
         justify-content: center;
     }
     nav a {
-        padding-top: 0.75em;
-        color: var(--primary);
+        margin-top: 0.75em;
+        color: var(--mainText);
     }
     .navLeft {
         text-align: left;
