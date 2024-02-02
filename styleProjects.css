@@ -95,7 +95,7 @@
 
 /* these className selectors are all for styling the color-coordinated project windows.  */
 /* this is all super repetitive and i really need to find a better way to do this, but as i want to remake in react, this is shelves and will be sorted when i get to that */
-.purpleHeader {
+.purpleColor {
     color: var(--primary);
 }
 .purpleBorder {

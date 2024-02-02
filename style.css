@@ -221,7 +221,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .headingTabBarContainer {
-    background-color: var(--primary);
+    background-color: var(--orange);
     width: 100%;
     z-index: 10;
 }
@@ -234,7 +234,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .starsTabBar {
-    background-color: var(--primary);
+    background-color: var(--orange);
     border-radius: 12px 0 13px 0;
     width: 80px;
     height: 100%;
@@ -253,7 +253,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
 }
 
 .negSpaceTabBar {
-    background-color: var(--primary);
+    background-color: var(--orange);
     border-radius: 0 13px 0 13px;
     width: 340px;
     height: 100%;
@@ -305,7 +305,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     letter-spacing: .05em;
     position: relative;
     top: 31x;
-    color: var(--purple);
+    color: var(--orange);
 }
 
 .windowContentContainer {
@@ -329,7 +329,7 @@ THEY HAVE INDIVIDUAL NUMBERED IDs SUCH AS STAR1  */
     object-fit: cover;
     margin: auto;
     z-index: 1;
-    border: 3px solid var(--primary);
+    border: 3px solid var(--orange);
     border-radius: 10px;
 }
 
